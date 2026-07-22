@@ -13,10 +13,10 @@ export default function Home() {
 />
 
 <a
-  href="tel:+37122103333"
+  href="tel:+37127070181"
   className="text-2xl font-semibold tracking-wide hover:text-pink-400 transition"
 >
-  📞 +371 221 033 33
+  📞 +371 27 070 181
 </a>
     </main>
   );
