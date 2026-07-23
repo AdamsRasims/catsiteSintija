@@ -1,33 +1,40 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Fraunces, Work_Sans } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const fraunces = Fraunces({
+  subsets: ["latin", "latin-ext"],
+  weight: ["300", "500", "600"],
+  style: ["normal", "italic"],
+  variable: "--font-fraunces",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const workSans = Work_Sans({
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "600"],
+  variable: "--font-work-sans",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Kaķu audzētava",
-  description: "Mīlestībā audzēti kaķēni veselīgā un mājīgā vidē.",
+  title: "AmberSoul | Abesīniešu kaķu audzētava",
+  description:
+    "AmberSoul — abesīniešu kaķu audzētava Latvijā. Rūpīgi audzēti, mīlestībā audzināti kaķēni.",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html
-      lang="lv"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="lv">
+      <body
+        className={`${fraunces.variable} ${workSans.variable} font-body bg-cream text-ink antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
