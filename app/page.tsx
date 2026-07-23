@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-const PHONE_DISPLAY = "+371 00 000 000";
-const PHONE_HREF = "tel:+37100000000";
+const PHONE_DISPLAY = "+371 27 070 181";
+const PHONE_HREF = "tel:+371 27 070 181";
 
 const kittens = [
   { src: "/images/k1.jpg", alt: "AmberSoul kaķēns Nr. 1" },
